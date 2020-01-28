@@ -1,13 +1,14 @@
 #include<stdio.h>
 int main() {
-    long int n, fact = 1;
-    scanf_s("%ld", &n);
+    unsigned long long int fact = 1;
+    int n;
+    scanf("%d", &n);
     
     if (n == 1 || n==0) {
-        printf("factorial is %ld", n);
+        printf("factorial is %d", n);
         return 0;
     }
-    if (n < 2) {
+    if (n < 0) {
         printf("Not valid");
         return 0;
     }
@@ -15,7 +16,7 @@ int main() {
         fact = fact * (n);
             n = n - 1;
     }
-    printf("Factorial is %ld",fact);
+    printf("Factorial is %llu",fact);
     
     return 0;
 }

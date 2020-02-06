@@ -1,5 +1,4 @@
 #include<stdio.h>
-#include<conio.h>
 int main()
 {
 	int i,a=71,l,j,b=1,c=71,k;
@@ -28,6 +27,5 @@ int main()
 		
 		c--;
 	}
-	getch();
 	return 0;
 }

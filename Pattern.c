@@ -1,31 +1,30 @@
-#include<stdio.h>
+#include<stdio.h> 
 int main()
 {
-	int i,a=71,l,j,b=1,c=71,k;
-	for(l=1;l<=7;l++)
-	{
-		for(i=65;i<=a;i++)
-			printf("%c", i);
-		
-		if(l>1)//space loop
-		{
-					
-			for(j=1;j<=b;j++)
-				printf(" ");
-				b=b+2;
-		}
-		
-		for(k=c;k>=65;k--)
-		{
-			if(k==71)
-				continue;
-			printf("%c", k);
-		}
-		
-		printf("\n");
-		a--;
-		
-		c--;
-	}
-	return 0;
+    int rowl = 72, spl = -1, d = 71;
+    for (int cr = 0; cr < 7; cr++) {
+        for (int b = 65; b < rowl; b++) {
+            printf("%c", b);
+        }
+        for (int spa = 0; spa < spl; spa++) { //space loop
+            printf(" ");
+        }
+        
+ 
+        for (int c = d; c > 64; c--) {
+            if (c == 71) {
+                continue;
+            }
+            printf("%c", c);
+        }
+        rowl -= 1;
+        spl += 2;
+        d -= 1;
+        if (cr == 6) {       //to remove the last space in the loop
+            continue;
+        }
+        printf("\n");
+
+    }
+    return 0;
 }

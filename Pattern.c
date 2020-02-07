@@ -1,29 +1,31 @@
-#include<stdio.h> 
+#include<stdio.h>
 int main()
 {
-    int rowl = 72, spl = -1, d = 70;
-    for (int cr = 0; cr < 7; cr++) {
-        for (int b = 65; b < rowl; b++) {
-            printf("%c", char(b));
-        }
-        for (int spa = 0; spa < spl; spa++) {
-            printf(" ");
-        }
-        
-        if (cr == 0) {
-            printf("FEDCBA\n");
-            rowl -= 1;
-            spl += 2;
-            continue;
-        }
-        for (int c = d; c > 64; c--) {
-            printf("%c", char(c));
-        }
-        rowl -= 1;
-        spl += 2;
-        d -= 1;
-        printf("\n");
-
-    }
-    return 0;
+	int i,a=71,l,j,b=1,c=71,k;
+	for(l=1;l<=7;l++)
+	{
+		for(i=65;i<=a;i++)
+			printf("%c", i);
+		
+		if(l>1)//space loop
+		{
+					
+			for(j=1;j<=b;j++)
+				printf(" ");
+				b=b+2;
+		}
+		
+		for(k=c;k>=65;k--)
+		{
+			if(k==71)
+				continue;
+			printf("%c", k);
+		}
+		
+		printf("\n");
+		a--;
+		
+		c--;
+	}
+	return 0;
 }

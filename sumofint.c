@@ -8,8 +8,5 @@ int main() {
         n = n / 10;
     }
     printf("Sum is %d", sum);
-    
-    
-    
     return 0;
 }

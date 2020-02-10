@@ -20,5 +20,6 @@ int main()
     else if ((int(n) >= 0 && int(n) <= 47) || (int(n) >= 58 && int(n) <= 64) || (int(n) >= 91 && int(n) <= 96) || (int(n) >= 123 && int(n) <= 127)) {
         printf("special character.");
     }
+    
     return 0;
 }

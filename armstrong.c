@@ -1,21 +1,26 @@
 #include<stdio.h>
+
 int main() {
-    int n, sum = 0, temp;
+    int n, sum = 0, temp,count=0,pow=1;
     printf("Enter number : ");
-    scanf("%d", &n);
+    scanf_s("%d", &n);
     temp = n;
-    while (n >0) {
-        sum = sum + ((n % 10) * (n % 10) * (n % 10));
+    while (n > 0) {
+        n = n / 10;
+        count += 1;
+    }
+    printf("Count : %d\n", count);
+    n = temp;
+    while (n > 0) {
+        for (int i=0; i<count; i++) {
+            pow *= n % 10;
+        }
+
+        sum = sum + pow;
+        pow = 1;
         n = n / 10;
     }
-    if (sum == temp) {
-        printf("Armstrong :)");
-    }
-    else {
-    printf("Nopes :(");
-    }   
-    
-    
-    
+   
+    (sum == temp)?printf("Armstrong :)"):printf("Nopes :(");
     return 0;
 }

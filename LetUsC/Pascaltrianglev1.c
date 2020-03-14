@@ -14,23 +14,26 @@ int fact(int num) {
     return fact;
 }
 
-int pascal(int n, int k) {
+int binomialcoef(int n, int k) {
     
     return (fact(n) / (fact(k) * fact(n - k)));
 
 }
-
+int pascal(int n) {
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j <= i; j++) {
+            printf("%d ", binomialcoef(i, j));
+        }
+        printf("\n");
+    }
+    return 0;
+}
 
 int main()
 {
     int n;
     printf("How many rows? ");
     scanf_s("%d", &n);
-    for (int i = 0; i < n; i++) {
-        for (int j = 0; j <= i; j++) {
-            printf("%d ", pascal(i, j));
-        }
-        printf("\n");
-    }
+    pascal(n);
     return 0;
 }

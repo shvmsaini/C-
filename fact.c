@@ -3,10 +3,10 @@ int main() {
     unsigned long long int fact = 1;
     int n;
     scanf("%d", &n);
-    
+
     if (n == 1 || n==0) {
-        printf("factorial is %d", n);
-        return 0;
+        printf("factorial is %d", 1);
+        return 1;
     }
     if (n < 0) {
         printf("Not valid");

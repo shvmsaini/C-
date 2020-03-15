@@ -9,27 +9,19 @@ void swap(int* item1, int* item2) {
 void selectionsort(int arr[], int n) {
 	
 	for (int i = 0; i < n-1; i++) {
-		int flag = -1;
+		int  mindex = i;
 		for (int j = i+1; j < n; j++) {
-			if (flag != -1) {
-				if (arr[flag] > arr[j]) {
-					flag = j;
-					
-				}
-				continue;
-			}
 			
-			if (arr[i] > arr[j]) {
-				flag = j;
-				
+			if (arr[mindex] > arr[j]) {
+				mindex = j;
+
 			}
 			
 		}
-		if (flag != -1) {
-			swap(&arr[i], &arr[flag]);
-			
+		if (mindex != i) {
+			swap(&arr[mindex], &arr[i]);
 		}
-		flag = -1;
+		
 	}
 
 }

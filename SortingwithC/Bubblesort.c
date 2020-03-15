@@ -7,14 +7,18 @@ void swap(int* item1, int* item2) {
 
 }
 void bubblesort(int arr[], int n) {
-	for (int i = 0; i < n - 1; i++) {
+	int flag;
+	for (int i = 0; i < n -1; i++) { //-1 as last index is not necessary 
+		flag = 0;
 		for (int j = 0; j < n - i - 1; j++) {
-			if (arr[j] > arr[j+1]) {
-				swap(&arr[j], &arr[j+1]);
+			if (arr[j] > arr[j + 1]) {
+				swap(&arr[j], &arr[j + 1]);
+				flag = 1;
 			}
 		}
+		if (flag == 0)
+			break;
 	}
-	
 
 }
 void printarray(int a[],int n) {
@@ -23,7 +27,7 @@ void printarray(int a[],int n) {
 	}
 }
 int main() {
-	int ar[] = { 12,3,2,6,5 }; // 5 elements
+	int ar[] = { 1,4,12,2,8 }; // 5 elements
 	int n = sizeof(ar) / sizeof(ar[0]); // 20/4 = 5
 	bubblesort(ar, n);
 	printarray(ar,n);

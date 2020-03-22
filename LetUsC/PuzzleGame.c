@@ -140,7 +140,7 @@ int puzzle() {
 	int arrright1[16] = { 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,' ' };
 	int arrright2[16] = { ' ',1,2,3,4,5,6,7,8,9,10,11,12,13,14,15 };
 	int arr[16] = { 1,' ',2,3,4,5,6,7,8,9,10,11,12,13,14,15 };
-	printf("\nUse arrow keys to move the tiles surrounding the space tile.\nPress Q or ESC to quit.\n");
+	printf("\nUse arrow keys to move the tiles surrounding the space tile and arrange the numbers in ascending order.\nPress Q or ESC to quit.\n");
 	printarray(arr);
 	while (equality(arr, arrright1) == 0 && equality(arr, arrright2) == 0) {
 

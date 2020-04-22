@@ -1,6 +1,5 @@
 #include <stdio.h> 
-int main()
-{
+int main(){
     char str[20];
     scanf_s("%s", str,20);
     int H = 0, x = 0,i;

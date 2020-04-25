@@ -1,7 +1,7 @@
 #include <stdio.h>
 int sym(int A[][5],int size) {
     for (int i = 0; i < size; i++) {
-        for (int j = 0; j < size; j++) {
+        for (int j = 0; j < i; j++) { // J < i to only check lower half of the matrix
             if (A[i][j] != A[j][i]){
                 return 0;
             }

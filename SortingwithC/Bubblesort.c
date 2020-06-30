@@ -33,3 +33,30 @@ int main() {
 	printarray(ar,n);
 	return 0;
 }
+or in python 3
+	
+	from array import *
+	x=int(input("how many elements"))
+	arr=array['i',[]]
+	for i in range(x):
+	   arr.append(int(input())
+	
+	print("Your array",arr)
+		     
+#buuble sort
+	flag=False
+	for i in range(x-1):
+	    for j in range(x-1-i):
+		      if arr[j]>arr[j+1]:
+		      	t=arr[j]
+			arr[j]=arr[j+1]
+			arr[j+1]=t
+			flag=True
+	    if flag==False:
+		      break
+	    else:
+		      flag==False
+	
+print("Sorted array", arr)
+		     
+		      
